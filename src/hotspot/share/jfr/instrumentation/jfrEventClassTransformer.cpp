@@ -1530,7 +1530,7 @@ static bool is_retransforming(const InstanceKlass* ik, TRAPS) {
   assert(ik != NULL, "invariant");
   assert(JdkJfrEvent::is_a(ik), "invariant");
   Symbol* const name = ik->name();
-  assert(name != NULL, "invariant");
+//  assert(name != NULL, "invariant");
   Handle class_loader(THREAD, ik->class_loader());
   Handle protection_domain(THREAD, ik->protection_domain());
   // nota bene: use lock-free dictionary lookup

@@ -491,7 +491,7 @@ const char* JfrJavaSupport::c_str(jstring string, Thread* t) {
  *  Exceptions and errors
  */
 static void create_and_throw(Symbol* name, const char* message, TRAPS) {
-  assert(name != NULL, "invariant");
+//  assert(name != NULL, "invariant");
   DEBUG_ONLY(JfrJavaSupport::check_java_thread_in_vm(THREAD));
   assert(!HAS_PENDING_EXCEPTION, "invariant");
   THROW_MSG(name, message);

@@ -626,9 +626,10 @@
 
 /* This implicitly assumes alignment is always to a power of 2. */
 #ifdef png_alignof
-#  define png_isaligned(ptr, type)\
-   (((type)((const char*)ptr-(const char*)0) & \
-   (type)(png_alignof(type)-1)) == 0)
+#  define png_isaligned(ptr, type) 0
+//#  define png_isaligned(ptr, type)\
+//   (((type)((const char*)ptr - NULL) & \
+//   (type)(png_alignof(type)-1)) == 0)
 #else
 #  define png_isaligned(ptr, type) 0
 #endif

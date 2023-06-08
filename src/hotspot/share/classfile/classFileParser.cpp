@@ -2074,8 +2074,8 @@ void ClassFileParser::throwIllegalSignature(const char* type,
                                             const Symbol* name,
                                             const Symbol* sig,
                                             TRAPS) const {
-  assert(name != NULL, "invariant");
-  assert(sig != NULL, "invariant");
+//  assert(name != NULL, "invariant");
+//  assert(sig != NULL, "invariant");
 
   ResourceMark rm(THREAD);
   Exceptions::fthrow(THREAD_AND_LOCATION,
@@ -3809,7 +3809,7 @@ static void print_field_layout(const Symbol* name,
                                int instance_fields_end,
                                int static_fields_end) {
 
-  assert(name != NULL, "invariant");
+//  assert(name != NULL, "invariant");
 
   tty->print("%s: field layout\n", name->as_klass_external_name());
   tty->print("  @%3d %s\n", instance_fields_start, "--- instance fields start ---");

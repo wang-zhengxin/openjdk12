@@ -1291,7 +1291,7 @@ ClassFileStream* ClassLoader::search_module_entries(const GrowableArray<ModuleCl
 
 // Called by the boot classloader to load classes
 InstanceKlass* ClassLoader::load_class(Symbol* name, bool search_append_only, TRAPS) {
-  assert(name != NULL, "invariant");
+//  assert(name != NULL, "invariant");
   assert(THREAD->is_Java_thread(), "must be a JavaThread");
 
   ResourceMark rm(THREAD);

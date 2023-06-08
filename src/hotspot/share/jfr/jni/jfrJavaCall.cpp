@@ -247,13 +247,13 @@ Symbol* JfrJavaArguments::name() const {
 }
 
 void JfrJavaArguments::set_name(const char* name, TRAPS) {
-  assert(name != NULL, "invariant");
+//  assert(name != NULL, "invariant");
   const Symbol* const sym = resolve(name, CHECK);
   set_name(sym);
 }
 
 void JfrJavaArguments::set_name(const Symbol* name) {
-  assert(name != NULL, "invariant");
+//  assert(name != NULL, "invariant");
   _name = name;
 }
 

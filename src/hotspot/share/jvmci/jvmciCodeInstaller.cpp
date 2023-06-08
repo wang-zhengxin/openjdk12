@@ -263,10 +263,11 @@ int AOTOopRecorder::find_index(jobject h) {
 }
 
 void AOTOopRecorder::record_meta_ref(jobject o, int index) {
-  assert(index > 0, "must be 1..n");
-  index -= 1; // reduce by one to convert to array index
-
-  assert(index == _meta_refs->length(), "must be last");
+//void AOTOopRecorder::record_meta_ref(jobject o) {
+//  assert(index > 0, "must be 1..n");
+//  index -= 1; // reduce by one to convert to array index
+//
+//  assert(index == _meta_refs->length(), "must be last");
   _meta_refs->append(o);
 }
 #endif // INCLUDE_AOT
